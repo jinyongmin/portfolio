@@ -4,3 +4,136 @@
     font-weight: normal;
     font-style: normal;
 }
+:root{
+    --color-white:#ffffff;
+    --color-black:#000000;
+    --color-blue:#79d4f7;
+
+    --font-large:48px;
+    --font-medium:28px;
+    --font-regular:18px;
+    --font-small:16px;
+    --font-micro:14px;
+
+    --size-border-radius:4px;
+
+    --animation-duration:300ms;
+}
+
+*{box-sizing: border-box;}
+body{
+    font-family: 'twayair',sans-serif;
+    margin:0;
+}
+
+a{
+    text-decoration: none;
+    color: var(--color-white);
+}
+ul{
+    padding-left: 0;
+}
+
+li{
+    list-style: none;
+}
+
+button{
+    background-color: turquoise;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+h1{
+    font-size: var(--font-large);
+    font-weight: bold;
+    color: var(--color-black);
+    margin: 16px 0px;
+}
+
+h2{
+    font-size: var(--font-medium);
+    color: var(--color-black);
+    margin: 8px 0px;
+}
+
+h3{
+    font-size: var(--font-regular);
+    color: var(--color-black);
+    margin: 8px 0px;
+}
+p{
+    font-size: var(--font-regular);
+    color: var(--color-black);
+    margin 4px 0;
+}
+/* Navbar */
+#navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    background-color: #79d4f7;
+}
+
+.navbar__logo{
+    font-size: var(--font-medium);
+    font-weight: bold;
+    color: white;
+}
+.navbar__menu{
+    display: flex;
+}
+
+.navbar__menu__item{
+    padding: 8px 12px;
+    margin: 0 4px;
+    color: var(--color-white);
+    cursor: pointer;
+}
+.navbar__menu__item.active{
+    border: 1px solid white;
+    border-radius: var(--size-border-radius);
+}
+
+.navbar__menu__item:hover{
+    background-color: var(--color-black);
+    border-radius: var(--size-border-radius);
+}
+.navbar__toggle-btn{
+    position: absolute;
+    top: 24px;
+    right: 32px;
+    font-size: 24px;
+    color: var(--color-blue);
+    display: none;
+}
+
+/* 홈 */
+#home{
+    background: url(./images/Yellow\ Black\ Futuristic\ Reaction\ Youtube\ Channel\ Art.png) center/ cover no-repeat;
+    padding: 40px;
+    text-align: center;
+}
+
+.home__avatar{
+    width: 250px;
+    height: 250px;
+    border-radius:50%;
+    border: 2px solid var(--color-blue);
+}
+.home__title, .home__description{
+    color: var(--color-black);
+
+}
+
+.home__contact {
+    color: var(--color-white);
+    font-size: var(--font-regular);
+    font-weight: bold;
+    margin: 24px;
+    padding: 8px 12px;
+    border: 2px solid var(--color-white);
+    border-radius: var(--size-border-radius);
+}
