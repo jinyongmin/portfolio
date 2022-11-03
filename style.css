@@ -5,10 +5,12 @@
     font-style: normal;
 }
 :root{
+    --color-grey:#;
     --color-white:#ffffff;
     --color-black:#000000;
     --color-blue:#79d4f7;
-
+    --color-yellow:#fff7d1;
+    --color-orange:#feb546;
     --font-large:48px;
     --font-medium:28px;
     --font-regular:18px;
@@ -22,8 +24,9 @@
 
 *{box-sizing: border-box;}
 body{
-    font-family: 'twayair',sans-serif;
+    font-family: 'WandohopeB',sans-serif;
     margin:0;
+    background-color: blanchedalmond;
 }
 
 a{
@@ -112,7 +115,7 @@ p{
 
 /* 홈 */
 #home{
-    background: url(./images/Yellow\ Black\ Futuristic\ Reaction\ Youtube\ Channel\ Art.png) center/ cover no-repeat;
+    background: url(./images/background.jpg) center/ cover no-repeat;
     padding: 40px;
     text-align: center;
 }
@@ -136,4 +139,277 @@ p{
     padding: 8px 12px;
     border: 2px solid var(--color-white);
     border-radius: var(--size-border-radius);
+}
+/* section 공통 */
+.section {
+    padding: 50px;
+    text-align: center;
+    margin: auto;
+}
+
+.section__container{
+    max-width: 1200px;
+    margin: auto;
+}
+/* 내 소개 */
+.about__majors{
+    display: flex;
+    justify-content: space-between;
+    margin: 80px 0;
+}
+.major__icon{
+    width: 170px;
+    height:170px;
+    line-height: 170px;
+    font-size: 70px;
+    margin: auto;
+    color: var(--color-blue);
+    border: 1px solid var(--color-blue);
+    border-radius: 50%;
+    margin-bottom: 16px;
+}
+.major__icon i{
+    transition: all var(--animation-duration) ease;
+
+}
+.major__icon:hover i{
+    color: var(--color-blue);
+    transform: rotate(-360deg) scale(1.1);
+}
+
+.major__title,.major__description{
+    font-size: var(--color-grey);
+}
+.major__description {
+    font-size: var(--font-small);
+}
+.job{
+    display: flex;
+    align-items:center;
+}
+.job__description{
+    margin: 0 16px;
+    text-align: left;
+}
+
+.job__name, .job_period{
+    color:var(--color-grey);
+    
+}
+.job__name{
+    font-size: var(--font-small);
+}
+.job__period{
+    font-size:var(--font-micro);
+}
+.about__jobs__icon{
+    width: 90px;
+    height: 90px;
+}
+
+/* 기술 */
+#skills{
+    background-color: var(--color-yellow);
+}
+
+.skillset{
+    display: flex;
+    background-color: var(--color-grey);
+    color: var(--color-white);
+    margin: 20px 0;
+}
+
+.skillset__title {
+    color: var(--color-white)
+}
+.skillset__left {
+    flex-basis: 60%;
+    background-color: var(--color-black);
+    padding: 20px 40px;
+}
+
+.skill{
+    margin-bottom: 32px;
+}
+
+.skill__description{
+    display: flex;
+    justify-content: space-between;
+
+}
+skill__bar{
+    width: 100%;
+    height: 30px;
+    background-color: var(--color-grey);
+}
+
+.skill__value{
+    height: 3px;
+    background-color: #feb546;
+}
+
+.skillset__right{
+    flex-basis: 40%;
+}
+
+.tools{
+    background-color: var(--color-grey);
+}
+
+.etc{
+    padding: 20px;
+}
+
+/* 내 작업실 */
+.work__categories{
+    margin: 40px;
+}
+.category__btn{
+    border:  1px solid var(--color-grey);
+    border-radius: var(--size-border-radius);
+    font-size: var(--font-regular);
+    padding: 8px 48px;
+}
+
+.category__btn.active, .category__btn:hover{
+    background-color: var(--color-pink);
+    color: var(--color-white);
+}
+
+.category__btn.active .vategory__count,
+.category__btn:hover .category__count {
+    opacity: 1;
+    top: 0;
+}
+
+.category__count {
+    background-color: var(#feb546);
+    border-radius: 50%;
+    color: var(--color-white);
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    display:inline-block;
+    position: relative;
+    top: -20px;
+    left: 4px;
+    opacity: 0;
+    transition: all var(--animation-duration) ease;
+}
+
+.work__projects {
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+}
+.project {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 280px;
+    height: 250px;
+    margin: 2px;
+    background-color: var(--color-yellow);
+}
+
+.project__img{
+    max-width: 100%;
+    max-height: 100%;
+    align-self: center;
+}
+
+
+.project__description{
+    position: absolute;
+    background-color: var(--color-black);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left: 0;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all var(--animation-duration) ease-in;
+}
+
+.project:hover .project__description{
+    opacity:0.8;
+    transform: translateY(0px);
+}
+
+.project__description h3{
+    color: var(--color-white);
+}
+
+.project__description h3:after{
+    content:'';
+    display: block;
+    position: relative;
+    left: 50%;
+    width: 2px;
+    height: 2px;
+    margin-left: -12px;
+    margin-top: 8px;
+    background-color: var(--color-blue);
+}
+
+/* 추천서 */
+#testimonials{
+    background-color: var(--color-yellow);
+}
+.testimonials{
+    margin: 40px;
+}
+.testimonials{
+    display: flex;
+    margin: 32px 0;
+}
+
+.testimonials__avatar{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+.testimonials__avatar:nth-child(odd){
+    margin-right: 40px;
+}
+.testimonials__avatar:nth-child(even){
+    margin-left: 40px;
+}
+
+.testimonial__speech-bubble{
+    padding: 18px;
+    background-color: var(--color-white);
+    border-radius: var(--size-border-radius);
+}
+.testimonial__speech-bubble p{
+    color: var(--color-grey);
+}
+.testimonial__speech-bubble a {
+    color: var(--color-blue);
+}
+
+/* Contact */
+#contact{
+    background-color: var(--color-blue);
+}
+.contact__title, .contact__email, .contact__rights{
+    color: var(--color-white);
+}
+
+.contact__title{
+    margin: 32px 0;
+}
+.contact__links{
+    font-size: var(--font-large);
+    margin: 24px 0;
+    transition: all var(--animation-duration) ease-in;
+}
+
+.contact__links i:hover{
+    transform:scale(1.1);
+    color:var(--color-yellow);
 }
