@@ -17,10 +17,10 @@ document.addEventListener('scroll', () =>{//현재 문서에 이벤트를 추가
 });           
 
 // 스크롤에 따른 메뉴바 고정
-const navbarmenu = document.querySelector('.navbar__menu');
+const navbarMenu = document.querySelector('.navbar__menu');
 
 // 소개부분에 맞춰서 
-navbarmenu.addEventListener('click',(e) =>{
+navbarMenu.addEventListener('click',(e) =>{
     // console.log(e);
     const target = e.target;
     const link = target.dataset.link;
@@ -29,8 +29,15 @@ navbarmenu.addEventListener('click',(e) =>{
 
     }
     // console.log(link);
+    navbarMenu.classList.remove('open');
     scrollIntoView(link);
+    
 })
+//모바일 메뉴버튼 설정
+const navbarToggleBtn = document.querySelector('.navbar__toggle-btn');
+navbarToggleBtn.addEventListener('click',() =>{
+    navbarMenu.classList.toggle('open');
+});
 // contact 버튼
 const homeContactBtn = document.querySelector(".home__contact");
 homeContactBtn.addEventListener('click',()=> {
@@ -54,11 +61,43 @@ arrowUp.addEventListener('click', () => {
     scrollIntoView('#home');
 });
 
+//선택한 프로젝트 보이기
+
+const workBtnContainer = document.querySelector('.work__categories');
+const projectContainer = document.querySelector('.work__projects');
+const projects = document.querySelectorAll('.project');
+
+workBtnContainer.addEventListener('click', (e)=>{
+    const filter = e.target.dataset.filter || e.target.paentNode.dataset.filter;
+    if(filter == null){
+        return;
+    }
+
+    const active = document.querySelector('.category__btn.selected');
+    if(active != null){
+        active.classList.remove('selected');
+    }
+    e.target.classList.add('selected');
+
+    projectContainer.classList.add('anin-out');
+    setTimeout(()=>{
+        projects.forEach((project)=>{
+            console.log(project.dataset.type);
+        if(filter === '*' || filter === project.dataset.type){
+            project.classList.remove('invisible');
+        }else{
+            project.classList.add('invisible');
+        }
+        
+        });
+        projectContainer.classList.remove('invisible');
+    },300)
 
 
-
+});
 
 function scrollIntoView(selector){
     const scrollTo = document.querySelector(selector);
     scrollTo.scrollIntoView({behavior:'smooth'});
 }
+

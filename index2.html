@@ -8,7 +8,7 @@
     <meta name="description" content="개발자">
     <link rel="icon" type="image/png" href="./images/멍멍이.png">
     <script src="https://kit.fontawesome.com/4d98e98811.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
     <script src="./script.js" defer></script>
 </head>
 <body>
@@ -19,18 +19,18 @@
             <a href="#">고양이</a>
         </div>
             <ul class="navbar__menu">
-                <li class="navbar__menu__item active" data-link="#home">홈</li>
-                <li class="navbar__menu__item" data-link="#about">내소개</li>
+                <li class="navbar__menu__item active" data-link="#navbar">홈</li>
+                <li class="navbar__menu__item" data-link="#home">내소개</li>
+                <li class="navbar__menu__item" data-link="#about">경력</li>
                 <li class="navbar__menu__item" data-link="#skills">기술</li>
-                <li class="navbar__menu__item" data-link="#work">경력</li>
-                <li class="navbar__menu__item" data-link="#work">프로젝트</li>
+                <li class="navbar__menu__item" data-link="#Work">프로젝트</li>
                 <li class="navbar__menu__item" data-link="#testimonials">추천서</li>
                 <li class="navbar__menu__item" data-link="#contact">contact</li>
             </ul>
             <!-- 버튼 시작 -->
             <button class="navbar__toggle-btn" data-link="#contact">
                 <i class="fa-solid fa-bars"></i>
-                <a href="#">업버튼</a>
+                <a href="#"></a>
             </button>
             <!-- 버튼 끝  -->
     </nav>
@@ -38,6 +38,7 @@
   
  <!-- Home 시작 -->
  <section id="home">
+    <br><br><br><br>
     <div class="home__container">
         <img src="./images/멍멍이.png" alt="yongmin's photo" class="home__avatar">
         <h1 class="home__title">안녕하세요 저는 진용민입니다!</h1>
@@ -120,11 +121,10 @@
         <h1>기술</h1>
         <h2>소개</h2>
         <p>
-            기술 채워줄것
-
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui perspiciatis dolore sit iure consequatur odit quaerat debitis praesentium asperiores ipsam accusamus architecto blanditiis alias natus illum, ab eius soluta labore!
         </p>
         <div class="skillset">
-            <div class="skillsetleft">
+            <div class="skillset__left">
                 <h3 class="skillset__title">language</h3>
                 <div class="skill">
                     <div class="skill__description">
@@ -150,7 +150,7 @@
                         <span>80%</span>
                     </div>
                     <div class="skill__bar">
-                        <div class="skill__value" style="width: 88%"></div>
+                        <div class="skill__value" style="width: 80%"></div>
                     </div>
                 </div>
                 <div class="skill">
@@ -159,7 +159,7 @@
                         <span>70%</span>
                     </div>
                     <div class="skill__bar">
-                        <div class="skill__value" style="width: 72%"></div>
+                        <div class="skill__value" style="width: 70%"></div>
                     </div>
                 </div>
                 <div class="skill">
@@ -168,40 +168,38 @@
                         <span>88%</span>
                     </div>
                     <div class="skill__bar">
-                        <div class="skill__value" style="width: 95%"></div>
+                        <div class="skill__value" style="width: 88%"></div>
                     </div>
                 </div>
                 <div class="skill">
                     <div class="skill__description">
                         <span>Java</span>
-                        <span>90%</span>
+                        <span>95%</span>
                     </div>
                     <div class="skill__bar">
-                        <div class="skill__value"></div>
+                        <div class="skill__value" style="width: 95%"></div>
                     </div>
                 </div>
             </div>
             <div class="skillset__right">
                 <div class="tools">
-                    <h3 class="skillset__title">tools </h3>
-                        <h3 class="tools__list">
-                        </h3>
-                            <ul>
-                                <li><span>Visual Studio Code</span></li>
-                                <li><span>IntellliJ</span></li>
-                                <li><span>Android Studio</span></li>
-                                <li>Xcode</li>
-                                <li>Github Desktop</li>
-                            </ul>
-                            <h3 class="skillset__title">etc</h3>
-                            <ul class="etc__list">
-                                <li><span>한국사능력검정시험 2급</span></li>
-                                <li><span>형법,형사소송법</span></li>
-                                <li><span>행정법, 행정학</span></li>
-                                <li><span>영화감상</span></li>
-                            </ul>
-                        </div>
-                    </div>
+                    <h3 class="skillset__title">Tools</h3>
+                    <ul class="tools__list">
+                        <li><span>Visual Studio Code</span></li>
+                        <li><span>IntelliJ</span></li>
+                        <li><span>Android Studio</span></li>
+                        <li><span>Xcode</span></li>
+                        <li><span>Github Desktop</span></li>
+                    </ul>
+                </div>
+                <div class="etc">
+                    <h3 class="skillset__title">Etc</h3>
+                    <ul class="etc__list">
+                        <li><span>Math</span></li>
+                        <li><span>Run</span></li>
+                        <li><span>Music</span></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
@@ -213,11 +211,11 @@
         <h1>내 작업실</h1>
         <h3>프로젝트</h3>
         <div class="work__categories">
-            <button class="category__btns elected" data-filter="*">
-                전체 <span class="category__count">10</span>
+            <button class="category__btn selected" data-filter="*">
+                전체 <span class="category__count">9</span>
             </button>
             <button class="category__btn" data-filter="front-end">
-            프론트엔드 <span class="category__count">5</span>
+            프론트엔드 <span class="category__count">4</span>
             </button>
             <button class="category__btn" data-filter="back-end">
                 백엔드 <span class="category__count">3</span>
