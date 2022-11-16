@@ -9,6 +9,7 @@
     <link rel="icon" type="image/png" href="./images/멍멍이.png">
     <script src="https://kit.fontawesome.com/4d98e98811.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
+    <script src="./script.js" defer></script>
 </head>
 <body>
     <!-- Navbar 시작 -->
@@ -18,28 +19,31 @@
             <a href="#">고양이</a>
         </div>
             <ul class="navbar__menu">
-                <li class="navbar__menu__item active">홈</li>
-                <li class="navbar__menu__item">내소개</li>
-                <li class="navbar__menu__item">기술</li>
-                <li class="navbar__menu__item">경력</li>
-                <li class="navbar__menu__item">프로젝트</li>
-                <li class="navbar__menu__item">추천서</li>
-                <li class="navbar__menu__item">contact</li>
+                <li class="navbar__menu__item active" data-link="#home">홈</li>
+                <li class="navbar__menu__item" data-link="#about">내소개</li>
+                <li class="navbar__menu__item" data-link="#skills">기술</li>
+                <li class="navbar__menu__item" data-link="#work">경력</li>
+                <li class="navbar__menu__item" data-link="#work">프로젝트</li>
+                <li class="navbar__menu__item" data-link="#testimonials">추천서</li>
+                <li class="navbar__menu__item" data-link="#contact">contact</li>
             </ul>
             <!-- 버튼 시작 -->
-            <button class="navbar__toggle-btn">
+            <button class="navbar__toggle-btn" data-link="#contact">
                 <i class="fa-solid fa-bars"></i>
+                <a href="#">업버튼</a>
             </button>
             <!-- 버튼 끝  -->
     </nav>
     <!-- Navbar 끝 -->
+  
  <!-- Home 시작 -->
  <section id="home">
     <div class="home__container">
         <img src="./images/멍멍이.png" alt="yongmin's photo" class="home__avatar">
         <h1 class="home__title">안녕하세요 저는 진용민입니다!</h1>
         <h1 class="home__description"> 경기도 부천에 거주하고있습니다 개발자가 될 예정입니다!</h1>
-        <button class ="home__contact">연락주세요1</button>
+        <button class ="home__contact" ><li data-link="#contact">연락주세요!</li>
+            </button>
     </div>
 </section>
 <!-- Home 끝 -->
@@ -209,21 +213,21 @@
         <h1>내 작업실</h1>
         <h3>프로젝트</h3>
         <div class="work__categories">
-            <button class="category__btn">
+            <button class="category__btns elected" data-filter="*">
                 전체 <span class="category__count">10</span>
             </button>
-            <button class="category__btn">
+            <button class="category__btn" data-filter="front-end">
             프론트엔드 <span class="category__count">5</span>
             </button>
-            <button class="category__btn">
+            <button class="category__btn" data-filter="back-end">
                 백엔드 <span class="category__count">3</span>
             </button>
-            <button class="category__btn">
+            <button class="category__btn" data-filter="mobile">
                 모바일 <span class="category__count">2</span>
             </button>
         </div>
         <div class="work__projects">
-            <a href="" class="project" target="_blank">
+            <a href="#" class="project" target="_blank" data-type="front-end">
                 <img src="./images/youtube.png" alt="" class="project__img">
             
             <div class="project__description">
@@ -231,7 +235,7 @@
                 <span>클론코딩 아주 똑같음</span>
             </div>
         </a>
-        <a href="" class="project" target="_blank">
+        <a href="#" class="project" target="_blank" data-type="front-end">
             <img src="./images/airbnb.png" alt="" class="project__img">
         
         <div class="project__description">
@@ -239,7 +243,7 @@
             <span>클론코딩 아주 똑같음</span>
         </div>
     </a>
-    <a href="" class="project" target="_blank">
+    <a href="#" class="project" target="_blank" data-type="front-end">
         <img src="./images/jeju.png" alt="" class="project__img">
     
     <div class="project__description">
@@ -247,7 +251,7 @@
         <span>클론코딩 아주 똑같음</span>
     </div>
 </a>
-<a href="" class="project" target="_blank">
+<a href="#" class="project" target="_blank" data-type="back-end">
     <img src="./images/CGV.png" alt="" class="project__img">
 
 <div class="project__description">
@@ -255,7 +259,7 @@
     <span>클론코딩 아주 똑같음</span>
 </div>
 </a>
-<a href="" class="project" target="_blank">
+<a href="#" class="project" target="_blank" data-type="back-end">
     <img src="./images/Market.png" alt="" class="project__img">
 
 <div class="project__description">
@@ -263,7 +267,7 @@
     <span>클론코딩 아주 똑같음</span>
 </div>
 </a>
-<a href="" class="project" target="_blank">
+<a href="#" class="project" target="_blank" data-type="mobile">
     <img src="./images/Jinair.png" alt="" class="project__img">
 
 <div class="project__description">
@@ -271,7 +275,7 @@
     <span>클론코딩 아주 똑같음</span>
 </div>
 </a>
-<a href="" class="project" target="_blank">
+<a href="#" class="project" target="_blank" data-type="back-end">
     <img src="./images/youtube.png" alt="" class="project__img">
 
 <div class="project__description">
@@ -279,7 +283,7 @@
     <span>클론코딩 아주 똑같음</span>
 </div>
 </a>
-<a href="" class="project" target="_blank">
+<a href="#" class="project" target="_blank" data-type="front-end">
     <img src="./images/here.png" alt="" class="project__img">
 
 <div class="project__description">
@@ -287,7 +291,7 @@
     <span>클론코딩 아주 똑같음</span>
 </div>
 </a>
-<a href="#" class="project" target="_blank">
+<a href="#" class="project" target="_blank" data-type="mobile">
     <img src="./images/ya.png" alt="" class="project__img">
 
 <div class="project__description">
@@ -348,7 +352,12 @@
         </a>
 </div>
 </section>
-<button class="arrow-up"></button>
 
+  <!-- 업버튼 -->
+  <button class="arrow-up">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+    </div>
+</nav>
 </body>
 </html>
